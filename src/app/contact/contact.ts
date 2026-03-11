@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-contact',
   imports: [],
-  templateUrl: './projects.html',
-  styleUrl: './projects.css',
+  templateUrl: './contact.html',
+  styleUrl: './contact.css',
 })
-export class Projects {
+export class Contact {
   constructor(private titleService: Title){
-    this.titleService.setTitle('Willie Dong - Projects');
+    this.titleService.setTitle('Willie Dong - Contact');
   }
 }
