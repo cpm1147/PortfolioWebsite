@@ -14,7 +14,7 @@ export class ProjectsServices {
       description: '',
       projectLink: '',
       tags: [Tag.REACT, Tag.JAVASCRIPT],
-      pictures: []
+      pictures: ['/images/Screenshot 2026-03-03 164540.png', '/images/Screenshot 2026-03-12 211051.png']
     },
     {
       id: 1,
