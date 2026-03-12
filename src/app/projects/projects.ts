@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProjectCard } from '../project-card/project-card';
 import { Project } from '../_models/Project';
 import { Tag } from '../_models/Tag';
+import { ProjectsServices } from '../_services/projects-services'
 
 
 @Component({
@@ -11,19 +12,14 @@ import { Tag } from '../_models/Tag';
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
-export class Projects {
+export class Projects implements OnInit{
 
-project: Project ={
-  id: 0,
-  name: 'Career Task Team',
-  summary: 'Test description',
-  description: '',
-  projectLink: '',
-  tags: [Tag.ANGULAR, Tag.TYPESCRIPT],
-  pictures: []
-};
+  projects = {} as Project[];
 
-  constructor(private titleService: Title){
+  constructor(private titleService: Title, private projectService: ProjectsServices){
     this.titleService.setTitle('Willie Dong - Projects');
+  }
+  ngOnInit(): void {
+    this.projects = this.projectService.GetProjects();
   }
 }
