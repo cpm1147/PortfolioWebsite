@@ -1,28 +1,15 @@
-<html lang="en">
-    <body>
-<h1>{{ title }}</h1>
+<div class="container">
 
-<table>
-    <tr>
-        <td>
-            <a href="http://future-forge-project.vercel.app" target="_blank" rel="noreferrer">
-                <img src="images/Screenshot 2026-03-03 164540.png" style="width:550px;height:300px;">
-                <br>
-                Career Task Team
-            </a>
-        </td>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" style="max-width: 300px; min-width: 380px;">
+            <app-project-card [projectName]="'Career Task Team'"></app-project-card>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4" style="max-width: 300px; min-width: 380px;">
+            <app-project-card [projectName]="'SPEED Article Manager'"></app-project-card>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4" style="max-width: 300px; min-width: 380px;">
+            <app-project-card [projectName]="'3D RPG'"></app-project-card>
+        </div>
+    </div>
 
-        <td>
-            <a href="https://speed-article-manager-willies-projects-baa3ebec.vercel.app/" target="_blank" rel="noreferrer">
-                Article Manager
-            </a>
-        </td>
-
-    </tr>
-    <tr>
-        
-    </tr>
-
-</table>
-</body>
-</html>
+</div>
