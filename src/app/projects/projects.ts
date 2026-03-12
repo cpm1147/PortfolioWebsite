@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProjectCard } from '../project-card/project-card';
+import { Project } from '../_models/Project';
+import { Tag } from '../_models/Tag';
 
 
 @Component({
@@ -10,6 +12,17 @@ import { ProjectCard } from '../project-card/project-card';
   styleUrl: './projects.css',
 })
 export class Projects {
+
+project: Project ={
+  id: 0,
+  name: 'Career Task Team',
+  summary: 'Test description',
+  description: '',
+  projectLink: '',
+  tags: [Tag.ANGULAR, Tag.TYPESCRIPT],
+  pictures: []
+};
+
   constructor(private titleService: Title){
     this.titleService.setTitle('Willie Dong - Projects');
   }
