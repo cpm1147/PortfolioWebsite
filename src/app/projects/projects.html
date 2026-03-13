@@ -1,5 +1,52 @@
 <div class="container">
 
+    <div class="mb-2">
+        <div>
+            <button class="btn btn-outline-primary mb-2 me-2" (click)="isColapsed = !isColapsed">Filter</button>
+            <button class="btn btn-outline-secondary mb-2" (click)="ResetFilters()" [hidden]="!isFiltering">Reset</button>
+        </div>
+
+        <div [collapse]="isColapsed" [isAnimated]="true">
+            <div class="border mb-2 shadow-sm" style="width: 250px;">
+                <form action="">
+                    <div class="row mx-0">
+                        <div class="col">
+                            <small><b>Languages:</b></small>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input 
+                                    type="checkbox" 
+                                    class="form-check-input position-static me-2"
+                                    [ngModelOptions]="{standalone: true}"
+                                    [(ngModel)]="typeScript"
+                                    (change)="Filter()"
+                                    name="TypeScript">
+                                    <label class="form-check-label small">TypeScript</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <small><b>Frameworks:</b></small>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input 
+                                    type="checkbox" 
+                                    class="form-check-input position-static me-2"
+                                    [ngModelOptions]="{standalone: true}"
+                                    [(ngModel)]="react"
+                                    (change)="Filter()"
+                                    name="React">
+                                    <label class="form-check-label small">React</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         @for (project of projects; track project.id) {
         <div class="col-lg-4 col-md-6 mb-4" style="max-width: 300px; min-width: 380px;">
