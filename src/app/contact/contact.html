@@ -1,1 +1,53 @@
-<p>contact works!</p>
+<div class="contact-wrapper">
+<div class="particles">
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+  <div class="contact-card">
+
+    <h2>Contact Me</h2>
+
+    <form #formRef="ngForm" (ngSubmit)="ProcessContact(formRef)">
+
+       <div class="input-group">
+        <input type="text" [(ngModel)]="name" name="name" required #nameRef="ngModel">
+        <label>Name</label>
+        </div>
+
+        <div class="input-group">
+        <input type="email" [(ngModel)]="email" name="email" required email #emailRef="ngModel">
+        <label>Email</label>
+        </div>
+
+        <div class="input-group">
+        <textarea [(ngModel)]="message" name="message" required #msgRef="ngModel"></textarea>
+        <label>Message</label>
+        </div>
+
+        <input type="text" [(ngModel)]="honeypot" name="honeypot" style="display:none">
+
+        <div class="g-recaptcha" data-sitekey="6LdiRpcsAAAAAI4OLsKStbfFaKH3UKwPIw-ddi0Z"></div>
+
+        <button type="submit"
+                [disabled]="isSending">
+        {{ isSending ? 'Sending...' : 'Send Message' }}
+        </button>
+    </form>
+  </div>
+
+</div>
+
+<div id="toast">
+  {{ toast.message }}
+</div>
+
+<!-- <div style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  color: white;
+  padding: 20px;
+  z-index: 999999;
+">
+  {{ toast.type }}
+</div> -->

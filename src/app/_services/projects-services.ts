@@ -10,20 +10,20 @@ export class ProjectsServices {
     {
       id: 0,
       name: 'Career Task Team',
-      summary: 'Test description',
+      summary: 'A full-stack web application designed Go Bear AI built using React, Express and Firebase',
       description: '',
-      projectLink: '',
+      projectLink: 'https://future-forge-project.vercel.app/',
       tags: [Tag.REACT, Tag.JAVASCRIPT],
-      pictures: ['/images/Screenshot 2026-03-03 164540.png', '/images/Screenshot 2026-03-12 211051.png']
+      pictures: ['/images/gobear/Screenshot 2026-03-03 164540.png', '/images/gobear/Screenshot 2026-03-12 211051.png']
     },
     {
       id: 1,
       name: 'SPEED Article Manager',
-      summary: 'Test description',
+      summary: 'This is a full-stack web application for managing, moderating, and reviewing articles. Users can register, log in, submit ,and access articles, while admins have elevated permissions for moderation and user management.',
       description: '',
-      projectLink: '',
+      projectLink: 'https://speed-article-manager-willies-projects-baa3ebec.vercel.app/',
       tags: [Tag.REACT, Tag.TYPESCRIPT],
-      pictures: []
+      pictures: ['/images/SPEED/Screenshot 2026-03-19 213619.png', '/images/SPEED/Screenshot 2026-03-19 213643.png']
     },
     {
       id: 2,
@@ -44,6 +44,15 @@ export class ProjectsServices {
       pictures: []
     },
     
+    {
+      id: 4,
+      name: 'Portfolio Website',
+      summary: 'Test description',
+      description: '',
+      projectLink: '',
+      tags: [Tag.TYPESCRIPT],
+      pictures: []
+    },
   ];
 
   GetProjects(){

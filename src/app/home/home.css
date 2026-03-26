@@ -1,0 +1,25 @@
+html, body {
+      height: 100%;      
+      margin: 0;   
+    }
+
+    .full-screen-container {
+      height: 100vh;           
+      display: flex;           
+      justify-content: center; 
+      align-items: center;  
+      text-align: center;  
+      background-color: darkblue; 
+    }
+
+    .text-center h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: aliceblue;
+    }
+
+    .text-center h3 {
+      margin: 0;
+      font-weight: normal;
+      color: #ffffff;
+    }

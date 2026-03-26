@@ -14,8 +14,13 @@
 
     <h3 class="mt-2">Description</h3>
     <p>{{project.description}}</p>
-    <p> View code <a href={{project.projectLink}} target="_blank">here</a></p>
 
+    <a class="btn btn-primary"
+    [href]="project.projectLink"
+    target="_blank">
+    Live Project
+    </a>
+    
     <hr>
     <div class="d-flex flex-wrap">
         @for (tag of project.tags; track tag) {

@@ -1,0 +1,17 @@
+.full-screen-container {
+      height: 100vh;   
+      display: flex;    
+      justify-content: center; 
+      align-items: center; 
+      text-align: center;    
+      background-color: rgb(0, 0, 0);
+}
+
+h2{
+    color: aqua;
+}
+
+p{
+    color: white;
+}
+

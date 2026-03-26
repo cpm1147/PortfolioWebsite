@@ -1,4 +1,9 @@
-<div class="container">
+<html>
+    <body>
+        <div class="projects-wrapper">
+    <div class="text-center">
+        <h2>My Projects</h2>
+    </div>
 
     <div class="mb-2">
         <div>
@@ -47,12 +52,21 @@
         </div>
     </div>
 
-    <div class="row">
+
+    <div class="d-flex justify-content-center">
+
+    <div class="row justify-content-start w-auto">
+
         @for (project of projects; track project.id) {
-        <div class="col-lg-4 col-md-6 mb-4" style="max-width: 300px; min-width: 380px;">
+        <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
             <app-project-card [project]="project"></app-project-card>
         </div>
         }
+
     </div>
 
 </div>
+    
+</div>
+</body>
+</html>

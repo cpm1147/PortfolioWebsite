@@ -1,0 +1,34 @@
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.sticky-nav.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
