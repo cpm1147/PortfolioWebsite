@@ -1,4 +1,5 @@
-<div class="card shadow text-center" (click)="OpenProjectModal()">
+<div class="card-wrapper" (click)="OpenProjectModal()">
+<div class="card shadow text-center">
    
             <carousel (click)="$event.stopPropagation()">
                 @for (picture of project.pictures; track picture) {
@@ -24,4 +25,5 @@
             }
         </div>
     </div>
+</div>
 </div>

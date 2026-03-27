@@ -13,7 +13,7 @@ export class ProjectsServices {
       summary: 'A full-stack web application designed Go Bear AI built using React, Express and Firebase',
       description: '',
       projectLink: 'https://future-forge-project.vercel.app/',
-      tags: [Tag.REACT, Tag.JAVASCRIPT],
+      tags: [Tag.REACT, Tag.EXPRESS, Tag.FIREBASE, Tag.JAVASCRIPT, Tag.HTML, Tag.CSS],
       pictures: ['/images/gobear/Screenshot 2026-03-03 164540.png', '/images/gobear/Screenshot 2026-03-12 211051.png']
     },
     {
@@ -31,7 +31,7 @@ export class ProjectsServices {
       summary: 'Test description',
       description: '',
       projectLink: '',
-      tags: [Tag.CSHARP, Tag.UNITY],
+      tags: [ Tag.UNITY, Tag.CSHARP],
       pictures: []
     },
     {
@@ -50,7 +50,7 @@ export class ProjectsServices {
       summary: 'Test description',
       description: '',
       projectLink: '',
-      tags: [Tag.TYPESCRIPT],
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT],
       pictures: []
     },
   ];
