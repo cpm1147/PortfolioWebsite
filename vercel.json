@@ -5,7 +5,7 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist/PortfolioWebsite"
+        "distDir": "dist/portfolio-website"
       }
     }
   ],
@@ -14,11 +14,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "env": {
-    "EMAILJS_SERVICE_ID": "@emailjs_service_id",
-    "EMAILJS_TEMPLATE_ID": "@emailjs_template_id",
-    "EMAILJS_PUBLIC_KEY": "@emailjs_public_key",
-    "RECAPTCHA_SITE_KEY": "@recaptcha_site_key"
-  }
+  ]
 }
