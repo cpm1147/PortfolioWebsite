@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+.full-screen-container {
+        height: 100vh; 
+        margin: 0;
+        }
+
+        @media (max-width: 768px) {
+        .container {
+            width: 100%; 
+        }
+        }
+
+.tag{
+    padding: 0 20px;
+    height: 30px;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 25px;
+    background-color: blue;
+    color: white;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #020617 30%,
+    #0f172a 60%,
+    #020617 100%
+  );
+  padding: 0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

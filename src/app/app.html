@@ -1,4 +1,23 @@
-<h1>{{ title }}</h1>
-<h2>{{ name }}</h2>
+<app-navbar [activeSection]="activeSection"></app-navbar>
+      
+<section id="home">
+    <app-home></app-home>
+</section>
+    
+<section id="about">
+    <app-about></app-about>
+</section>
 
-<app-projects></app-projects>
+<section id="projects">
+    <app-projects></app-projects>
+</section>
+
+<!--
+<section id="resume">
+    <app-resume></app-resume>
+</section>>
+-->
+
+<section id="contact">
+   <app-contact></app-contact>
+</section>

@@ -1,0 +1,20 @@
+section {
+  scroll-margin-top: 120px;
+}
+
+.html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 120px;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

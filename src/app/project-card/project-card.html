@@ -1,0 +1,28 @@
+<div class="card-wrapper" (click)="OpenProjectModal()">
+<div class="card shadow text-center">
+   
+            <carousel (click)="$event.stopPropagation()">
+                @for (media of project.media; track media) {
+                    <slide>
+                        <img src="{{media}}"
+                        style="width: 100%;"
+                        (click)="OpenProjectModal(); $event.stopPropagation()">
+                    </slide>
+                }
+            </carousel>
+
+     <div class="card-body">        
+        <h5 class="card-title">{{ project.name }}</h5>
+        <p class="card-text">{{ project.summary }}</p>
+    </div>
+
+    <div class="card-footer">
+        <div class="d-flex flex-wrap justify-content-center">
+            @for (tag of project.tags; track tag) {
+                <!-- data binding! -->
+                <div class="tag me-2 mb-1" [style.background-color]="tag.color">{{tag}}</div>
+            }
+        </div>
+    </div>
+</div>
+</div>
