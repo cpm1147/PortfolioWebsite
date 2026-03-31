@@ -15,14 +15,14 @@
 
     background: conic-gradient(
         from var(--gradient-angle),
-        rgb(0, 0, 0),
+        #0f172a,
         aqua,
         aqua,
-        rgb(0, 0, 0)
+        #0f172a
     );
 
     filter: blur(10px);
-    opacity: 0.4; 
+    opacity: 0.2; 
     transition: opacity 0.3s ease;
 
     animation: rotation 8s linear infinite;

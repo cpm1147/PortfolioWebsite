@@ -2,15 +2,14 @@
 <div class="card shadow text-center">
    
             <carousel (click)="$event.stopPropagation()">
-                @for (picture of project.pictures; track picture) {
+                @for (media of project.media; track media) {
                     <slide>
-                        <img src="{{picture}}"
+                        <img src="{{media}}"
                         style="width: 100%;"
                         (click)="OpenProjectModal(); $event.stopPropagation()">
                     </slide>
                 }
             </carousel>
-            <br>
 
      <div class="card-body">        
         <h5 class="card-title">{{ project.name }}</h5>

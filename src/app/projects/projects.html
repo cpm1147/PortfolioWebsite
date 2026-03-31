@@ -1,15 +1,13 @@
-<html>
-    <body>
-        <div class="projects-wrapper">
+<div class="projects-wrapper">
     <div class="text-center">
-        <h2>My Projects</h2>
+        <h2 class="title">Projects</h2>
     </div>
 
     <div class="mb-2">
-        <div>
+        <!-- <div>
             <button class="btn btn-outline-primary mb-2 me-2" (click)="isColapsed = !isColapsed">Filter</button>
             <button class="btn btn-outline-secondary mb-2" (click)="ResetFilters()" [hidden]="!isFiltering">Reset</button>
-        </div>
+        </div> -->
 
         <div [collapse]="isColapsed" [isAnimated]="true">
             <div class="border mb-2 shadow-sm" style="width: 250px;">
@@ -68,5 +66,3 @@
 </div>
     
 </div>
-</body>
-</html>

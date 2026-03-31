@@ -1,23 +1,43 @@
-<nav class="navbar-expand-md border-bottom mb-3 sticky-nav" [class.scrolled]="isScrolled">
-    <div class="container">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/" fragment="home" [class.text-dark]="activeSection==='home'">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/" fragment="about" [class.text-dark]="activeSection==='about'">About</a>  
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/" fragment="projects" [class.text-dark]="activeSection==='projects'">Projects</a>
-            </li>
-            <!--
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/" fragment="resume" [class.text-dark]="activeSection==='resume'">Resume</a>
-            </li>
-            -->
-            <li>
-                <a class="nav-link" routerLink="/" fragment="contact" [class.text-dark]="activeSection==='contact'">Contact</a>
-            </li>
-        </ul>
-    </div>
+<nav class="sticky-nav" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    
+    <a href="https://williedong.com" class="nav-logo">
+      Willie Dong
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item">
+        <a class="nav-link"
+            routerLink="/"
+            fragment="home"
+            [class.active]="activeSection === 'home'">
+            Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+            routerLink="/"
+            fragment="about"
+            [class.active]="activeSection === 'about'">
+            About
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+            routerLink="/"
+            fragment="projects"
+            [class.active]="activeSection === 'projects'">
+            Projects
+        </a>
+      </li>
+      <li class="nav-item">
+            <a class="nav-link"
+            routerLink="/"
+            fragment="contact"
+            [class.active]="activeSection === 'contact'">
+            Contact
+            </a>
+      </li>
+    </ul>
+
+  </div>
 </nav>

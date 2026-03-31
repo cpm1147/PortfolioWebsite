@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 .full-screen-container {
         height: 100vh; 
-        margin: auto;
+        margin: 0;
         }
 
         @media (max-width: 768px) {
@@ -21,21 +21,23 @@
     color: white;
 }
 
-/* .body{
-    background-color: black;
-} */
-
-.toast {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: red;
-  color: white;
-  padding: 20px;
-  z-index: 999999;
-  animation: fadeIn 0.3s ease;
+body {
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #020617 30%,
+    #0f172a 60%,
+    #020617 100%
+  );
+  padding: 0;
 }
 
-.toast.success { background: #22c55e; }
-.toast.error { background: #ef4444; }
-.toast.warning { background: #f59e0b; }
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

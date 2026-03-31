@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +17,7 @@ export class Contact {
   constructor(private titleService: Title){
     this.titleService.setTitle('Willie Dong - Contact');
   }
-  
+  @ViewChild('emailRef') emailRef!: NgModel;
   name: string = '';
   email: string = '';
   message: string = '';
@@ -23,6 +25,8 @@ export class Contact {
   isSending = false;
   isSuccess = false;
 
+  recaptchaSiteKey = environment.recaptchaSiteKey;
+  
   getCaptchaToken(): string | null {
   const response = (window as any).grecaptcha?.getResponse();
   return response || null;
@@ -59,6 +63,10 @@ showToast(message: string, type: 'success' | 'error' | 'warning') {
       this.showToast('Please enter your email', 'warning');
       return;
     }
+    if (!this.emailRef.valid) {
+        this.showToast('Please enter a valid email', 'warning');
+        return;
+    }
     if (!this.message) {
       this.showToast('Please enter a message', 'warning');
       return;
@@ -87,10 +95,10 @@ showToast(message: string, type: 'success' | 'error' | 'warning') {
     };
 
     emailjs.send(
-      'service_h79w7fv',
-      'template_zzy6v0d',
+      environment.emailJsServiceId,
+      environment.emailJsTemplateId,
       templateParams,
-      '3rGr33ICJb5O2xFkv'
+      environment.emailJsPublicKey
     ).then(() => {
 
       confetti({

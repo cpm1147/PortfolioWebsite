@@ -1,4 +1,4 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { AfterViewInit, Component, HostListener, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Navbar } from './navbar/navbar';
@@ -11,34 +11,37 @@ import { About } from './about/about';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet, 
-    Header, 
+    // RouterOutlet, 
+    // Header, 
     Navbar, 
     Home, 
     About,
     Projects,
-    Resume,
+    // Resume,
     Contact],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements AfterViewInit{
   protected readonly title = signal('PortfolioWebsite');
   activeSection = 'home';
 
-  @HostListener('window:scroll', [])
-  onScroll() {
-    const sections = ['home', 'about', 'projects', 'resume', 'contact'];
+  ngAfterViewInit() {
+  const sections = document.querySelectorAll('section');
 
-    for (let section of sections) {
-      const el = document.getElementById(section);
-      if (el) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= 120 && rect.bottom >= 120) { 
-          this.activeSection = section;
-        }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
       }
-    }
-  }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
   
 }

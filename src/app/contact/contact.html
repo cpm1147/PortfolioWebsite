@@ -9,23 +9,29 @@
     <form #formRef="ngForm" (ngSubmit)="ProcessContact(formRef)">
 
        <div class="input-group">
-        <input type="text" [(ngModel)]="name" name="name" required #nameRef="ngModel">
+        <input type="text" [(ngModel)]="name" name="name" required placeholder=" " #nameRef="ngModel">
         <label>Name</label>
         </div>
 
         <div class="input-group">
-        <input type="email" [(ngModel)]="email" name="email" required email #emailRef="ngModel">
-        <label>Email</label>
+          <input type="email"
+                [(ngModel)]="email"
+                name="email"
+                placeholder=" "
+                required
+                email
+                #emailRef="ngModel">
+          <label>Email</label>
         </div>
 
         <div class="input-group">
-        <textarea [(ngModel)]="message" name="message" required #msgRef="ngModel"></textarea>
+        <textarea [(ngModel)]="message" name="message" required placeholder=" " #msgRef="ngModel"></textarea>
         <label>Message</label>
         </div>
 
         <input type="text" [(ngModel)]="honeypot" name="honeypot" style="display:none">
 
-        <div class="g-recaptcha" data-sitekey="6LdiRpcsAAAAAI4OLsKStbfFaKH3UKwPIw-ddi0Z"></div>
+        <div class="g-recaptcha" [attr.data-sitekey]="recaptchaSiteKey"></div>
 
         <button type="submit"
                 [disabled]="isSending">
@@ -39,15 +45,3 @@
 <div id="toast">
   {{ toast.message }}
 </div>
-
-<!-- <div style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: red;
-  color: white;
-  padding: 20px;
-  z-index: 999999;
-">
-  {{ toast.type }}
-</div> -->

@@ -11,7 +11,11 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
   styleUrl: './project-card.css',
 })
 export class ProjectCard {
-   
+
+  isVideo(file: string): boolean {
+    return file.endsWith('.mp4') || file.endsWith('.webm') || file.endsWith('.ogg');
+  }
+
   ngAfterViewInit() {
     const controls = document.querySelectorAll(
       '.carousel-control-prev, .carousel-control-next, .carousel-indicators'

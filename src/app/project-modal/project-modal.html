@@ -2,23 +2,22 @@
     <h2>{{ project.name }}</h2>
     <button class="btn-close" (click)="bsModalRef.hide()"></button>
 </div>
-
-<div class="modal-body">
-    <carousel>
-        @for (picture of project.pictures; track picture) {
+<carousel>
+        @for (media of project.media; track media) {
             <slide>
-            <img src={{picture}} alt="slide" style="display: block; width: 100%;">
+            <img src={{media}} alt="slide" style="display: block; width: 100%;">
             </slide>
         }
-    </carousel>
-
+</carousel>
+<div class="modal-body">
     <h3 class="mt-2">Description</h3>
-    <p>{{project.description}}</p>
+    <p>{{project.description}}</p><br>
 
-    <a class="btn btn-primary"
+    <a *ngIf="project.showProjectLink"
+    class="btn btn-primary"
     [href]="project.projectLink"
     target="_blank">
-    Live Project
+    View Project
     </a>
     
     <hr>
