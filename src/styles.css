@@ -11,14 +11,14 @@
         }
 
 .tag{
-    padding: 0 20px;
-    height: 30px;
+    padding: 0.1rem 0.5rem;
     width: fit-content;
-    font-size: 14px;
-    line-height: 30px;
-    border-radius: 25px;
+    font-size: clamp(0.1rem, 1vw, 0.7rem);
+    line-height: 1.2rem;
+    border-radius: 30px;
     background-color: blue;
     color: white;
+    white-space: nowrap;
 }
 
 body {
@@ -40,4 +40,13 @@ h1, h2, h3, p {
 ul {
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 16px; 
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }

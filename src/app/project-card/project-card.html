@@ -5,7 +5,6 @@
                 @for (media of project.media; track media) {
                     <slide>
                         <img src="{{media}}"
-                        style="width: 100%;"
                         (click)="OpenProjectModal(); $event.stopPropagation()">
                     </slide>
                 }

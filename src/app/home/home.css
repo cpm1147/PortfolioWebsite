@@ -31,11 +31,11 @@
 }
 
 .text-center h1 {
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
 }
 
 .text-center h3 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
 }
 
 .text-center h1,

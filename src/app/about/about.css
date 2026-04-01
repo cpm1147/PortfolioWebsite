@@ -1,5 +1,6 @@
 .full-screen-container {
   height: 100vh;
+  padding-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,27 +11,28 @@
 .full-screen-container::before {
   content: "";
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: clamp(300px, 30vw, 600px);
+  height: clamp(300px, 30vw, 600px);
   filter: blur(80px);
   animation: floatGlow 8s ease-in-out infinite;
 }
 
 @keyframes floatGlow {
-  0% { transform: translate(-100px, -50px); }
-  50% { transform: translate(100px, 50px); }
-  100% { transform: translate(-100px, -50px); }
+  0% { transform: translate(-10vw, -5vh); }
+  50% { transform: translate(10vw, 5vh); }
+  100% { transform: translate(-10vw, -5vh); }
 }
 
 .about-card {
-  max-width: 700px;
-  padding: 40px;
-  border-radius: 20px;
+  max-width: 50%;
+  padding: 2rem;
+  margin: auto;
+  border-radius: clamp(10px, 2vw, 20px);
 
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
 
-  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 clamp(20px, 3vw, 40px) rgba(0, 255, 255, 0.15);
 
   text-align: center;
   color: white;
@@ -40,13 +42,13 @@
 }
 
 .about-card h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: aqua;
-  margin-bottom: 20px;
+  margin-bottom: clamp(10px, 2vw, 20px);
 }
 
 .about-card p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: #d1d5db;
 }
@@ -54,4 +56,10 @@
 .highlight {
   color: aqua;
   font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 15px;
+  }
 }
