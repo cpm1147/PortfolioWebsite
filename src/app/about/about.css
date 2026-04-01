@@ -57,8 +57,49 @@
   font-weight: bold;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .full-screen-container {
+    padding: 12vh 16px 40px 16px; 
+    align-items: flex-start; 
+  }
+
+  .full-screen-container::before {
+    width: 250px;
+    height: 250px;
+    filter: blur(60px);
+  }
+
   .about-card {
-    padding: 15px;
+    max-width: 100%; 
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .about-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .full-screen-container {
+    padding: 10vh 12px 30px 12px;
+  }
+
+  .about-card {
+    padding: 16px;
+  }
+
+  .about-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-card p {
+    font-size: 0.9rem;
   }
 }
