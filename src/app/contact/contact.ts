@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/envirnoment.prod';
 
 @Component({
   selector: 'app-contact',
