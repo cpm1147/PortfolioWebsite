@@ -31,7 +31,7 @@
 
         <input type="text" [(ngModel)]="honeypot" name="honeypot" style="display:none">
 
-        <div class="g-recaptcha" [attr.data-sitekey]="recaptchaSiteKey"></div>
+        <div class="g-recaptcha" [attr.data-sitekey]="environment.recaptchaSiteKey"></div>
 
         <button type="submit"
                 [disabled]="isSending">
