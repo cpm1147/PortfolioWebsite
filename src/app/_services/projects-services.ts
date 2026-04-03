@@ -30,7 +30,7 @@ export class ProjectsServices {
       description: 'In a team of four, we developed a full-stack article management system following Agile Scrum practices and iterative development. The platform supports multiple user roles including submitters, moderators, analysts, and general users, each with tailored functionality. I contributed to the development of the article submission and moderation workflow, enabling users to submit article metadata through validated forms, which are then stored in a MongoDB database and queued for review. I also helped implement a moderation dashboard where moderators can approve or reject submissions, detect duplicate entries using title/DOI checks, and track previously rejected articles. The system ensures data integrity and workflow efficiency through role-based access control, validation mechanisms, and automated duplicate detection. Additionally, we integrated backend APIs with a responsive frontend interface, enabling seamless interaction between users and the system.',
       projectLink: 'https://speed-article-manager-willies-projects-baa3ebec.vercel.app/',
       showProjectLink: true,
-      tags: [Tag.REACT, Tag.NODEJS, Tag.NESTJS, Tag.MONGODB, Tag.TYPESCRIPT],
+      tags: [Tag.REACT, Tag.NODEJS, Tag.NESTJS, Tag.MONGODB, Tag.TYPESCRIPT, Tag.HTML, Tag.CSS],
       media: [
         '/images/SPEED/speed-image1.png',
         '/images/SPEED/speed-image2.png',
@@ -79,7 +79,7 @@ export class ProjectsServices {
       description: 'Developed a fully responsive, single-page portfolio website using Angular, TypeScript, Bootstrap, and CSS, featuring dynamic sections with smooth scrolling and fade-in animations. The site includes an interactive project showcase with carousel-based displays, live links, and skill tags, as well as a contact form with email validation, reCAPTCHA, and toast notifications for success or error messages. Modern design elements such as gradient backgrounds, glass-morphism cards, and subtle animations provide a polished and engaging user experience. Navigation is enhanced with a sticky navbar, active section tracking, smooth scrolling, and hover underline effects.',
       projectLink: 'williedong.com',
       showProjectLink: true,
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT],
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.HTML, Tag.CSS],
       media: ['/images/portfolio-website/portfolio-website-image.png']
     },
   ];
