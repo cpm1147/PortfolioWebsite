@@ -28,7 +28,7 @@ export class ProjectsServices {
       name: 'SPEED Article Manager',
       summary: 'This is a full-stack web application for managing, moderating, and reviewing articles. Users can register, log in, submit, and access articles, while admins have elevated permissions for moderation and user management.',
       description: 'In a team of four, we developed a full-stack article management system following Agile Scrum practices and iterative development. The platform supports multiple user roles including submitters, moderators, analysts, and general users, each with tailored functionality. I contributed to the development of the article submission and moderation workflow, enabling users to submit article metadata through validated forms, which are then stored in a MongoDB database and queued for review. I also helped implement a moderation dashboard where moderators can approve or reject submissions, detect duplicate entries using title/DOI checks, and track previously rejected articles. The system ensures data integrity and workflow efficiency through role-based access control, validation mechanisms, and automated duplicate detection. Additionally, we integrated backend APIs with a responsive frontend interface, enabling seamless interaction between users and the system.',
-      projectLink: 'https://speed-article-manager-willies-projects-baa3ebec.vercel.app/',
+      projectLink: 'https://speed-article-manager.vercel.app/',
       showProjectLink: true,
       tags: [Tag.REACT, Tag.NODEJS, Tag.NESTJS, Tag.MONGODB, Tag.TYPESCRIPT, Tag.HTML, Tag.CSS],
       media: [
