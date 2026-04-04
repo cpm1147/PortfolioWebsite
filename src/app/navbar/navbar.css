@@ -33,7 +33,7 @@
 .nav-logo {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-weight: 550;
-  font-family: fantasy;
+  font-family: Impact, fantasy;
   line-height: 1;
   color: aqua;
   text-decoration: none;
@@ -75,12 +75,7 @@
 @media (max-width: 768px) {
 
   .nav-logo {
-    font-size: 1.3rem;    
-    letter-spacing: 0.5px;   
-    max-width: 60%;          
-    white-space: nowrap;    
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: none;
   }
 
   .nav-container {
@@ -90,7 +85,10 @@
 
 @media (max-width: 480px) {
   .nav-logo {
-    font-size: 1.1rem;
-    max-width: 50%;
+    display: none;
+  }
+
+  .nav-container {
+    justify-content: center;
   }
 }
