@@ -8,6 +8,10 @@
   color: white;
 }
 
+.description {
+  white-space: pre-line;
+}
+
 /* .modal {
   display: flex !important;
   align-items: center;

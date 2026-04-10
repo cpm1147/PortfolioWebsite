@@ -6,7 +6,9 @@ export interface Project{
     summary: string;
     description: string;
     projectLink: string;
+    gitHubLink: string;
     showProjectLink: boolean;
+    showGitHubLink: boolean;
     media: string[];
     tags: Tag[];
 }
