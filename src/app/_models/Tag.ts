@@ -13,7 +13,9 @@ export class Tag{
     static readonly NESTJS = new Tag('Nest.JS', 'rgb(196, 5, 81)');
     static readonly HTML = new Tag('HTML', 'rgb(215, 86, 0)');
     static readonly CSS = new Tag('CSS', 'rgb(25, 113, 244)');
-    
+    static readonly NEXTJS = new Tag('Next.js', 'rgb(0, 0, 0)');
+    static readonly BOOTSTRAP = new Tag('Bootstrap', '#6f42c1 ');
+    static readonly TAILWIND = new Tag('Tailwind CSS', '#06b6d4');
 
     private constructor(private readonly key: string, public readonly color: string){
 

@@ -34,7 +34,7 @@ export class ProjectsServices {
       gitHubLink: 'https://github.com/cpm1147/SPEED-Article-Manager',
       showProjectLink: true,
       showGitHubLink: true,
-      tags: [Tag.REACT, Tag.NODEJS, Tag.NESTJS, Tag.MONGODB, Tag.TYPESCRIPT, Tag.HTML, Tag.CSS],
+      tags: [Tag.REACT, Tag.NEXTJS, Tag.NODEJS, Tag.NESTJS, Tag.MONGODB, Tag.TYPESCRIPT, Tag.HTML, Tag.TAILWIND],
       media: [
         '/images/SPEED/speed-image1.png',
         '/images/SPEED/speed-image2.png',
@@ -89,7 +89,7 @@ export class ProjectsServices {
       gitHubLink: 'https://github.com/cpm1147/PortfolioWebsite',
       showProjectLink: true,
       showGitHubLink: true,
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.HTML, Tag.CSS],
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.HTML, Tag.CSS, Tag.BOOTSTRAP],
       media: ['/images/portfolio-website/portfolio-website-image.png']
     },
   ];
