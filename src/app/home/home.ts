@@ -51,10 +51,6 @@ export class Home implements AfterViewInit {
   private target = { x: 0, y: 0 };
   private animateHeader = true;
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle('Willie Dong - Home');
-  }
-
   ngAfterViewInit() {
     this.canvas = this.canvasRef.nativeElement;
     this.ctx = this.canvas.getContext('2d')!;

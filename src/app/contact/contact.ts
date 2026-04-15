@@ -14,9 +14,6 @@ import { environment } from '../../environments/envirnoment.prod';
   styleUrls: ['./contact.css'],
 })
 export class Contact {
-  constructor(private titleService: Title){
-    this.titleService.setTitle('Willie Dong - Contact');
-  }
   @ViewChild('emailRef') emailRef!: NgModel;
   name: string = '';
   email: string = '';

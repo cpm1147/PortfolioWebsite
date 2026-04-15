@@ -23,7 +23,7 @@ import { About } from './about/about';
   styleUrl: './app.css'
 })
 export class App implements AfterViewInit{
-  protected readonly title = signal('PortfolioWebsite');
+  protected readonly title = signal('Willie Dong Portfolio');
   activeSection = 'home';
 
   ngAfterViewInit() {

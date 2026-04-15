@@ -25,8 +25,8 @@ export class Projects implements OnInit{
 
   isFiltering: boolean = false;
 
-  constructor(private titleService: Title, private projectService: ProjectsServices){
-    this.titleService.setTitle('Willie Dong - Projects');
+  constructor(private projectService: ProjectsServices){
+    
   }
   ngOnInit(): void {
     this.projects = this.projectService.GetProjects();
